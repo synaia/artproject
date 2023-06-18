@@ -23,8 +23,18 @@ def remove_it(file):
     # infile.thumbnail((300, 200), Image.ANTIALIAS)
     infile.thumbnail((infile.size[0] // 2, infile.size[1] // 2), Image.ANTIALIAS)
     newfile = remove(infile) # remove bg / model
-    bg = Image.open("../uploaded/abstract-blur-background.jpeg")
+    runalone: bool = False
+    try:
+        bg = Image.open("../uploaded/abstract-blur-background.jpeg")
+    except Exception as ex:
+        runalone = True
+        bg = Image.open("./server/uploaded/abstract-blur-background.jpeg")
+
     bg.thumbnail((newfile.size[0], newfile.size[1]), Image.ANTIALIAS)
     bg.paste(newfile, (0, 0), newfile)
-    bg.save(f'../uploaded/{int(time.time())}.png')
+    if runalone:
+        bg.save(f'./server/uploaded/{int(time.time())}.png')
+    else:
+        bg.save(f'../uploaded/{int(time.time())}.png')
+
     return image_to_base64(bg)

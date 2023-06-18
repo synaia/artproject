@@ -17,8 +17,8 @@ import time
 # openssl genrsa -out key.pem 2048
 # openssl rsa -in key.pem -outform PEM -pubout -out public.pem
 base_path = os.getcwd()
-key_pem = os.getcwd() + '/../certs/key.pem'
-public_pem = os.getcwd() + '/../certs/public.crt'
+key_pem = os.getcwd() + '/../../client/snowpack.key'
+public_pem = os.getcwd() + '/../../client/snowpack.crt'
 
 
 origins = [
