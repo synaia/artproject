@@ -1,0 +1,30 @@
+{
+  "name": "retaily",
+  "version": "1.0.0",
+  "description": "Art Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack  dev --port 9080 --secure",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "snowpack init"
+  },
+  "author": "Wilton Beltre",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.1.3",
+    "dexie": "^3.2.3",
+    "dexie-react-hooks": "^1.1.1",
+    "form-data": "^4.0.0",
+    "html5-qrcode": "^2.3.8",
+    "qrcode": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-html5-camera-photo": "^1.5.11",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "snowpack": "^3.7.1"
+  }
+}
