@@ -25,10 +25,10 @@ def remove_it(file):
     newfile = remove(infile) # remove bg / model
     runalone: bool = False
     try:
-        bg = Image.open("../uploaded/abstract-blur-background.jpeg")
+        bg = Image.open("../asset/abstract-blur-background.jpeg")
     except Exception as ex:
         runalone = True
-        bg = Image.open("./server/uploaded/abstract-blur-background.jpeg")
+        bg = Image.open("./server/asset/abstract-blur-background.jpeg")
 
     bg.thumbnail((newfile.size[0], newfile.size[1]), Image.ANTIALIAS)
     bg.paste(newfile, (0, 0), newfile)
